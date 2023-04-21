@@ -1,16 +1,19 @@
 package com.herman87.springbootsecurityclient.model;
 
-import jdk.nashorn.internal.objects.annotations.Getter;
-import jdk.nashorn.internal.objects.annotations.Setter;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgumentConstructor
-@AllArgumentConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserModel {
     private String firstName;
-    private String lastname;
+    private String lastName;
     private String email;
     private String password;
-    private String macthingPassword;
+    private String matchingPassword;
 }
