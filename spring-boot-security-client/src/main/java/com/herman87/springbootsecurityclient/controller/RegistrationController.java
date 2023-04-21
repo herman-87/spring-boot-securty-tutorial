@@ -34,10 +34,11 @@ public class RegistrationController {
 
     @GetMapping("/verifyRegistration")
     public String verifyRegistration(@RequestParam("token") String token) {
-        String response = userService.verifyUserToken(token);
-        if (!Objects.equals(response, "valid")) {
-            return "Verification su"
+        String response = userService.validateVerificationToken(token);
+        if (Objects.equals(response, "valid")) {
+            return "User verify successfully";
         }
+        return "Bad user";
     }
 
     private String applicationUrl(HttpServletRequest request) {
