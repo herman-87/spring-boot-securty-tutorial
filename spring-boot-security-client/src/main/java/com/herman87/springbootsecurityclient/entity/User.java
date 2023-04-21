@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Table;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "t_user")
 public class User {
